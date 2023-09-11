@@ -7,7 +7,7 @@ build image
 
 ```
 docker build --no-cache \
-             -f jupyter-lab-extension.dockerfile \
+             -f base-devel.dockerfile \
              -t tverous/pytorch-notebook:extension \
              .
 ```

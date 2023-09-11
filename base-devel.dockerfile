@@ -35,7 +35,7 @@ RUN pip install \
     numpy \
     torch \
     torchvision\ 
-    torchaudio \
+    torchaudio 
   
 
 # start jupyter lab
