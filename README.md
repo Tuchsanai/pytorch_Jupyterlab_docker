@@ -3,19 +3,24 @@
 https://github.com/Tverous/pytorch-notebook
 
 
-# build image
+## Pytorch jupyter notebook with base
+
+### build image
 
 ```
 docker build --no-cache \
              -f base-devel.dockerfile \
-             -t mypytorch/pytorch-notebook:extension \
+             -t mypytorch/pytorch-notebook:base \
              .
 ```
-# Start the container with GPUs support:
+### Start the container with GPUs support:
 ```
 docker run --rm -it  \
            --gpus all  \
            -p 8888:8888  \
            -e JUPYTER_TOKEN=passwd  \
-           mypytorch/pytorch-notebook:extension
+           mypytorch/pytorch-notebook:base
 ```
+
+
+## Pytorch jupyter notebook with base
