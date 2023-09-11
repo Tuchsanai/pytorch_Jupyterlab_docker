@@ -68,3 +68,10 @@ docker run --rm -it  \
            -p 8080:8080  \
            tverous/vscode:extension
 ```
+
+```
+docker run --rm -d  \
+           --gpus all  \
+           -p 8080:8080  \
+           tverous/vscode:extension
+```
