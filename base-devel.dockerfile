@@ -34,7 +34,9 @@ RUN pip install \
     jupyterlab-git \
     # https://github.com/jtpio/jupyterlab-system-monitor
     jupyterlab-system-monitor \
-    jupyterlab_nvdashboard
+    jupyterlab_nvdashboard   \
+    # Install ipykernel
+    ipykernel
 
 # build with some basic python packages
 RUN pip install \
