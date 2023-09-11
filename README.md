@@ -6,7 +6,8 @@ https://github.com/Tverous/pytorch-notebook
 # build image
 
 ```
-docker build -f base-devel.dockerfile \
+docker build --no-cache \
+             -f base-devel.dockerfile \
              -t mypytorch/pytorch-notebook:extension \
              .
 ```
