@@ -42,7 +42,7 @@ docker build --no-cache \
              .
 ```
 
-``
+```
 docker run --rm -it  \
            --gpus all  \
            -p 8888:8888  \
