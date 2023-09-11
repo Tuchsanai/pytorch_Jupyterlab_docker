@@ -32,11 +32,9 @@ RUN pip install \
     jupyterlab-horizon-theme \
     # https://github.com/jupyterlab/jupyterlab-git
     jupyterlab-git \
-    # https://github.com/jupyter-lsp/jupyterlab-lsp
-    jupyterlab-lsp \
-    'python-lsp-server[all]' \
     # https://github.com/jtpio/jupyterlab-system-monitor
-    jupyterlab-system-monitor
+    jupyterlab-system-monitor \
+    jupyterlab_nvdashboard
 
 # build with some basic python packages
 RUN pip install \
