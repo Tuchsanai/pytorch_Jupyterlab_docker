@@ -42,6 +42,7 @@ docker build --no-cache \
              .
 ```
 
+### Start the container with GPUs support:
 ```
 docker run --rm -it  \
            --gpus all  \
