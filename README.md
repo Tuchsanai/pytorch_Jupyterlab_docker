@@ -35,11 +35,12 @@ docker run --rm -it  \
 
 
 ## Pytorch jupyter notebook with tverous/pytorch-notebook with GPUs support
-
+```
 docker build --no-cache \
              -f tverous-extension.dockerfile \
              -t tverous/pytorch-notebook:extension \
              .
+```
 
 ``
 docker run --rm -it  \
