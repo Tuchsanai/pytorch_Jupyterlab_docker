@@ -52,7 +52,7 @@ docker run --rm -it  \
 ```
 
 
-## Pytorch jupyter notebook with tverous/pytorch-notebook with GPUs support
+##Vscode with tverous/pytorch-notebook with GPUs support
 ```
 docker build --no-cache \
              -f vscode-pytorch.dockerfile \
