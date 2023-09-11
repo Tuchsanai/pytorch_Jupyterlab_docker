@@ -7,6 +7,8 @@ ENV SHELL=/bin/bash
 # Create a working directory
 WORKDIR /app/
 
+
+
 # Build with some basic utilities
 RUN apt-get update && apt-get install -y \
     python3-pip \
@@ -17,6 +19,12 @@ RUN apt-get update && apt-get install -y \
 # alias python='python3'
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
+
+# Copy the requirements.txt file to the container
+COPY requirements.txt  requirements.txt
+
+# Install the packages from requirements.txt
+RUN pip install -r  requirements.txt
 
 # install jupyter lab extensions
 RUN pip install \
@@ -32,7 +40,6 @@ RUN pip install \
 
 # build with some basic python packages
 RUN pip install \
-    numpy \
     torch \
     torchvision\ 
     torchaudio 

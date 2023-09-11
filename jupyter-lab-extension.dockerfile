@@ -19,9 +19,9 @@ RUN pip install \
     jupyterlab-lsp \
     'python-lsp-server[all]' \
     # https://github.com/jtpio/jupyterlab-system-monitor
-    jupyterlab-system-monitor
-
-
+    jupyterlab-system-monitor \
+    #https://github.com/rapidsai/jupyterlab-nvdashboard
+    jupyterlab_nvdashboard
 
 
 
