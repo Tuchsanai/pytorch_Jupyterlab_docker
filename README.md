@@ -56,7 +56,7 @@ docker run --rm -it  \
 ```
 docker build --no-cache \
              -f vscode-pytorch.dockerfile \
-             -t tverous/vscode:extension 
+             -t tverous/vscode:extension  .
 
 ```
 
