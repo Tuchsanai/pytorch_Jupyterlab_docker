@@ -50,3 +50,21 @@ docker run --rm -it  \
            -e JUPYTER_TOKEN=passwd  \
            tverous/pytorch-notebook:extension
 ```
+
+
+## Pytorch jupyter notebook with tverous/pytorch-notebook with GPUs support
+```
+docker build --no-cache \
+             -f vscode-pytorch.dockerfile \
+             -t tverous/vscode:extension 
+
+```
+
+
+### Start the container with GPUs support:
+```
+docker run --rm -it  \
+           --gpus all  \
+           -p 8080:8080  \
+           tverous/vscode:extension
+```
