@@ -1,26 +1,20 @@
-FROM tverous/pytorch-notebook
+FROM tverous/pytorch-notebook:latest
 
-
-# Copy the contents of the local directory into the container at /app
 
 # Copy the requirements.txt file to the container
-COPY requirements.txt /tmp/requirements.txt
+COPY requirements.txt  requirements.txt
 
 # Install the packages from requirements.txt
-RUN pip install -r /tmp/requirements.txt
+RUN pip install -r  requirements.txt
 
-# install jupyter lab extensions
+## install jupyter lab extensions
 RUN pip install \
     # https://github.com/mohirio/jupyterlab-horizon-theme
     jupyterlab-horizon-theme \
     # https://github.com/jupyterlab/jupyterlab-git
     jupyterlab-git \
-    # https://github.com/jupyter-lsp/jupyterlab-lsp
-    jupyterlab-lsp \
-    'python-lsp-server[all]' \
     # https://github.com/jtpio/jupyterlab-system-monitor
     jupyterlab-system-monitor \
-    #https://github.com/rapidsai/jupyterlab-nvdashboard
     jupyterlab_nvdashboard
 
 

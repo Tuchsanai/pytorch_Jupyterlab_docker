@@ -2,8 +2,19 @@
 
 https://github.com/Tverous/pytorch-notebook
 
+### Clean Docker
 
-## Pytorch jupyter notebook with base
+```
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -q)
+docker volume rm $(docker volume ls -q)
+
+
+```
+
+
+## Pytorch jupyter notebook with base-devel with GPUs support
 
 ### build image
 
@@ -23,4 +34,17 @@ docker run --rm -it  \
 ```
 
 
-## Pytorch jupyter notebook with base
+## Pytorch jupyter notebook with tverous/pytorch-notebook with GPUs support
+
+docker build --no-cache \
+             -f tverous-extension.dockerfile \
+             -t tverous/pytorch-notebook:extension \
+             .
+
+``
+docker run --rm -it  \
+           --gpus all  \
+           -p 8888:8888  \
+           -e JUPYTER_TOKEN=passwd  \
+           tverous/pytorch-notebook:extension
+```
