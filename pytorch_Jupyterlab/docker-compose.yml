@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  jupyterlab:
+    build: 
+      dockerfile: tverous-extension.dockerfile
+    ports:
+      - "8888:8888"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    runtime: nvidia
+    volumes:
+      - ./notebooks:/workspace/notebooks
