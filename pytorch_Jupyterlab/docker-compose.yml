@@ -10,3 +10,6 @@ services:
       - ./notebooks:/workspace/notebooks
     environment:
       - JUPYTER_TOKEN=passwd
+    runtime: nvidia  # Use NVIDIA GPU runtime
+
+    
