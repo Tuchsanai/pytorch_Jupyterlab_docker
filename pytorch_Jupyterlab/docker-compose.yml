@@ -3,19 +3,13 @@ version: '3.8'
 services:
   jupyterlab:
     build: 
-      dockerfile: tverous-extension.dockerfile
+      dockerfile: base-devel.dockerfile
     ports:
       - "8888:8888"
     volumes:
       - ./notebooks:/workspace/notebooks
     environment:
       - JUPYTER_TOKEN=passwd
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
+    runtime: nvidia  # Use NVIDIA GPU runtime
 
     
