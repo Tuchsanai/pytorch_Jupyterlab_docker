@@ -1,0 +1,10 @@
+version: '3'
+services:
+  code-server:
+    build:
+      dockerfile: vs_server.dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - DEBIAN_FRONTEND=non-interactive
+      - CODE_SERVER_PASSWORD=3241 # Set your desired password here
