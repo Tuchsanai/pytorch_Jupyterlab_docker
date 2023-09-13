@@ -20,9 +20,9 @@ RUN pip install \
     ipykernel
 
 
-# Create a custom directory
-RUN mkdir -p ./Workspace
-WORKDIR   ./Workspace
+# # Create a custom directory
+# RUN mkdir -p ./Workspace
+# WORKDIR   ./Workspace
 
 
 
