@@ -3,7 +3,7 @@ version: '3.8'
 services:
   jupyterlab:
     build: 
-      dockerfile: base-devel.dockerfile
+      dockerfile: tverous-extension.dockerfile
     ports:
       - "8888:8888"
     volumes:
