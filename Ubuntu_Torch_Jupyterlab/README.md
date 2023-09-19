@@ -35,7 +35,7 @@ docker build --no-cache \
 docker tag mypytorch/pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:19sep2023
 ```
 ```
-docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:nvidia_cuda_12.2.0-19sep2023
+docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:19sep2023
 ```
 
 ### Start the container with GPUs support with password:
@@ -57,7 +57,7 @@ docker-compose -f docker-compose.yml up -d
 ## Method II  pull with docker hub
 
 ```
-docker pull tuchsanai/pytorch_jupyterlab_ubuntu22.04:nvidia_cuda_12.2.0-19sep2023
+docker pull tuchsanai/pytorch_jupyterlab_ubuntu22.04:19sep2023
 ```
 
 ### With GPU
