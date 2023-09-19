@@ -11,8 +11,8 @@ https://upcloud.com/resources/tutorials/install-code-server-ubuntu-18-04
 
 ```
 docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
-docker rmi $(docker images -q)
+docker rm -f $(docker ps -a -q)
+docker rmi -f $(docker images -q)
 docker volume rm $(docker volume ls -q)
 
 
@@ -30,7 +30,15 @@ docker build --no-cache \
              -t mypytorch/pytorch-notebook:base \
              .
 ```
-### Start the container with GPUs support:
+
+```
+docker tag mypytorch/pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:nvidia_cuda_12.2.0-19sep2023
+```
+```
+docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:nvidia_cuda_12.2.0-19sep2023
+```
+
+### Start the container with GPUs support with password:
 ```
 docker run --rm -it  \
            --gpus all  \
@@ -45,3 +53,7 @@ d
 ```
 docker-compose -f docker-compose.yml up -d
 ```
+
+## Method II  pull with docker hub
+
+docker pull  tuchsanai/pytorch_jupyterlab_ubuntu22.04:nvidia_cuda_12.2.0-19sep2023
