@@ -48,13 +48,7 @@ docker build --no-cache \
 ```
 
 ### Start the container with GPUs support:
-```
-docker run --rm -it  \
-           --gpus all  \
-           -p 8888:8888  \
-           -e JUPYTER_TOKEN=passwd  \
-           tverous/pytorch-notebook:extension
-```
+
 
 ```
 docker run --rm -d  \
