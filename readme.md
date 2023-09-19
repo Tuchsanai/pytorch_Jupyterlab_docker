@@ -10,8 +10,7 @@ sudo vi install_docker_ubuntu_2204.sh
 ```
 
 ```
-
-`#!/bin/bash
+#!/bin/bash
 
 # Update package list
 echo "Updating package list..."
