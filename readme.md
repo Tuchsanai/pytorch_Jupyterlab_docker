@@ -80,6 +80,3 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
 ```
-
-## Docker-compose Vscode-Pytorch
-## Docker-compose Jupyterlab-Pytorch
