@@ -4,14 +4,12 @@
 
 * Open Terminal: Open a terminal window on your Ubuntu 22.04 machine.
 
-* Create Script File: Type 
 
 ```
 sudo vi install_docker_ubuntu_2204.sh 
 ```
 
-
-Enter Insert Mode: Press i to enter insert mode in vi.
+```
 
 `#!/bin/bash
 
@@ -48,7 +46,6 @@ echo "Adding current user to Docker group..."
 sudo usermod -aG docker ${USER}
 
 echo "Installation complete. You may need to log out and log back in for changes to take effect."
-``
 
 ```
 
