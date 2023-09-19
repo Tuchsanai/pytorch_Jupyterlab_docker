@@ -56,4 +56,30 @@ docker-compose -f docker-compose.yml up -d
 
 ## Method II  pull with docker hub
 
-docker pull  tuchsanai/pytorch_jupyterlab_ubuntu22.04:nvidia_cuda_12.2.0-19sep2023
+```
+docker pull tuchsanai/pytorch_jupyterlab_ubuntu22.04:nvidia_cuda_12.2.0-19sep2023
+```
+
+### With GPU
+
+```
+docker run --rm -d  \
+           --gpus all  \
+           -p 8888:8888  \
+           -e JUPYTER_TOKEN=passwd  \
+           -v ./Notebook:/app  \
+            tuchsanai/pytorch_jupyterlab_ubuntu22.04:nvidia_cuda_12.2.0-19sep2023
+```
+
+
+
+docker 
+### Without GPU
+
+```
+docker run --rm -d \
+           -p 8888:8888  \
+           -e JUPYTER_TOKEN=passwd  \
+           -v ./Notebook:/app  \
+           tuchsanai/pytorch_jupyterlab_ubuntu22.04:nvidia_cuda_12.2.0-19sep2023
+```
