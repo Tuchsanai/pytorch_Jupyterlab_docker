@@ -19,7 +19,8 @@ docker volume rm $(docker volume ls -q)
 ```
 
 
-## Pytorch jupyter notebook with base-devel with GPUs support
+# Pytorch jupyter notebook with base-devel with GPUs support
+## Method I.  With Build Image
 
 ### build image
 
@@ -38,3 +39,10 @@ docker run --rm -it  \
            mypytorch/pytorch-notebook:base
 ```
 
+## Method II.  With Docker Compose Up 
+
+docker-compose up
+
+```
+docker-compose up . -d 
+```
