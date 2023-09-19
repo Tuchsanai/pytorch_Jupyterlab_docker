@@ -1,9 +1,0 @@
-version: '3'
-services:
-  code-server:
-    build:
-      dockerfile: vs_server.dockerfile
-    ports:
-      - "8080:8080"
-    volumes:
-      - ./data:/Workspace
