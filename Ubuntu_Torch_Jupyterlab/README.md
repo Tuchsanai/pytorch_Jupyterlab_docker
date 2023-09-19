@@ -32,7 +32,7 @@ docker build --no-cache \
 ```
 
 ```
-docker tag mypytorch/pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:nvidia_cuda_12.2.0-19sep2023
+docker tag mypytorch/pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:19sep2023
 ```
 ```
 docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:nvidia_cuda_12.2.0-19sep2023
@@ -68,7 +68,7 @@ docker run --rm -d  \
            -p 8888:8888  \
            -e JUPYTER_TOKEN=passwd  \
            -v ./Notebook:/app  \
-            tuchsanai/pytorch_jupyterlab_ubuntu22.04:nvidia_cuda_12.2.0-19sep2023
+            tuchsanai/pytorch_jupyterlab_ubuntu22.04:19sep2023
 ```
 
 
@@ -81,5 +81,5 @@ docker run --rm -d \
            -p 8888:8888  \
            -e JUPYTER_TOKEN=passwd  \
            -v ./Notebook:/app  \
-           tuchsanai/pytorch_jupyterlab_ubuntu22.04:nvidia_cuda_12.2.0-19sep2023
+           tuchsanai/pytorch_jupyterlab_ubuntu22.04:19sep2023
 ```
