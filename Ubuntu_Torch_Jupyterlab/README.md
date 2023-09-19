@@ -1,4 +1,4 @@
-# pytorch_docker
+# pytorch_docker with nvidia/cuda:12.2.0-devel-ubuntu22.04
 
 https://github.com/Tverous/pytorch-notebook
 
@@ -41,8 +41,7 @@ docker run --rm -it  \
 
 ## Method II.  With Docker Compose Up 
 
-docker-compose up
-
+d
 ```
-docker-compose up . -d 
+docker-compose -f docker-compose.yml up -d
 ```
