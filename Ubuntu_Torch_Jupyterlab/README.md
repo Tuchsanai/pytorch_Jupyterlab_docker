@@ -84,11 +84,3 @@ docker run --rm -d \
            tuchsanai/pytorch_jupyterlab_ubuntu22.04:19sep2023
 ```
 
-
-```
-docker run --rm -d \
-           -p 8888:8888  \
-           -e JUPYTER_TOKEN=passwd  \
-           -v ./Notebook:/app  \
-           tuchsanai/pytorch_jupyterlab_ubuntu22.04
-```
