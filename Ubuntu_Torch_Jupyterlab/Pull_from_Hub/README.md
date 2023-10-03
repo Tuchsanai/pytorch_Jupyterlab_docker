@@ -25,7 +25,6 @@ docker run --rm -d  \
 ```
 
 
-
 docker 
 ### Without GPU
 
