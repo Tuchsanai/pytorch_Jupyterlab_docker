@@ -94,3 +94,10 @@ wget  "https://us.download.nvidia.com/XFree86/Linux-x86_64/535.113.01/NVIDIA-Lin
 chmod +x ./NVIDIA-Linux-x86_64-535.113.01.run # the name may change from yours
 sudo /NVIDIA-Linux-x86_64-535.113.01.run
 ```
+
+3.  Follow the installation steps. Reboot and you should be able to run 
+
+```
+nvidia-smi
+```
+the output should look similar to:
