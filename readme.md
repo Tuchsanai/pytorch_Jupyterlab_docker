@@ -1,82 +1,78 @@
 
-# Install docker 
 
+## Installation Docker and Docker Compose on Ubuntu 22.04Steps
 
-* Open Terminal: Open a terminal window on your Ubuntu 22.04 machine.
+1. Open your terminal and type the following command to create a new shell script file using the vi editor:
 
+    ```bash
+    vi install_docker_docker-compose.sh
+    ```
 
-```
-sudo vi install_docker_ubuntu_2204.sh 
-```
+2. Press `i` to go into insert mode, then copy and paste the following shell script code into the editor:
 
 ```
 #!/bin/bash
 
-# Update package list
-echo "Updating package list..."
+# Update Ubuntu Package List
+sudo apt update && sudo apt upgrade -y
+
+# Install Common required packages or tools
+sudo apt install -y ca-certificates curl gnupg lsb-release
+
+# Add Docker’s GPG key
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
+# Add the official Docker repository
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Update the package list again
 sudo apt update
 
-# Install prerequisites
-echo "Installing prerequisites..."
-sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+# Install Docker CE and other tools
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# Add Docker GPG key
-echo "Adding Docker GPG key..."
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# Check Docker version
+docker -v
 
-# Add Docker repository
-echo "Adding Docker repository..."
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+# Check Docker service status
+systemctl status docker --no-pager -l
 
-# Update package list again
-echo "Updating package list again..."
-sudo apt update
+# Add your Ubuntu user to the Docker group
+sudo usermod -aG docker $USER
 
-# Install Docker
-echo "Installing Docker..."
-sudo apt install -y docker-ce
+# Reload the shell session
+newgrp docker
 
-# Verify Docker installation
-echo "Verifying Docker installation..."
-sudo systemctl status docker --no-pager
+# Test Docker by installing an image
+docker run hello-world
 
-# Add user to Docker group (optional)
-echo "Adding current user to Docker group..."
-sudo usermod -aG docker ${USER}
-
-echo "Installation complete. You may need to log out and log back in for changes to take effect."
-
-```
-
-Make the Script Executable: Run 
-
-```
-sudo chmod +x install_docker_ubuntu_2204.sh 
-```
-
-
-Run the Script: Finally, execute the script with 
-
-```
-sudo ./install_docker_ubuntu_2204.sh
-```
-
-
-
-
-# Install docker compose
-
-To install Docker Compose, you can download it from the Docker's GitHub repository. First, check the latest release of Docker Compose and replace the 1.29.2 in the command below with the latest version:
-https://github.com/docker/compose/releases
-
-
-```
-sudo curl -L "https://github.com/docker/compose/releases/download/v2.21.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-
-```
-
-```
+# Install Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
+
+# Verify Docker Installation
+docker --version
+# Verify Docker Compose Installation
 docker-compose --version
 
+
+
+```
+
+
+3. Press ESC to exit insert mode.
+
+4. Type :wq and press Enter to save the file and exit the vi editor.
+
+5. Give the script executable permissions:
+
+    ```bash
+    chmod +x install_docker_docker-compose.sh
+    ```
+
+6. Run the script as a superuser:
+
+```
+sudo ./install_docker_docker-compose.sh
 ```
