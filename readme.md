@@ -78,7 +78,9 @@ sudo ./install_docker_docker-compose.sh
 ```
 
 ## Installing Nvidia Drivers for Machine Learning
-#### Ref : https://blog.roboflow.com/nvidia-docker-vscode-pytorch/
+##### Ref : https://blog.roboflow.com/nvidia-docker-vscode-pytorch/
+
+
 
 1. To manually install the drivers, go to the official driver page https://www.nvidia.com/download/index.aspx . In my case, RTX 4090 and Linux 64bit. If you have my same system, you can run the following command:
 
