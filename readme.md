@@ -82,7 +82,8 @@ sudo ./install_docker_docker-compose.sh
 
 
 
-1. To manually install the drivers, go to the official driver page https://www.nvidia.com/download/index.aspx . In my case, RTX 4090 and Linux 64bit. If you have my same system, you can run the following command:
+1. To manually install the drivers, go to the official driver page https://www.nvidia.com/download/index.aspx . 
+
 
 ```
 wget  "https://us.download.nvidia.com/tesla/440.95.01/NVIDIA-Linux-x86_64-440.95.01.run"
