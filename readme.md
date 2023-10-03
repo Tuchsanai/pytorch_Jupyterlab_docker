@@ -51,14 +51,14 @@ echo "Installation complete. You may need to log out and log back in for changes
 Make the Script Executable: Run 
 
 ```
-chmod +x install_docker_ubuntu_2204.sh 
+sudo chmod +x install_docker_ubuntu_2204.sh 
 ```
 
 
 Run the Script: Finally, execute the script with 
 
 ```
-sudo ./install_docker_ubuntu_2204.sh.
+sudo ./install_docker_ubuntu_2204.sh
 ```
 
 
