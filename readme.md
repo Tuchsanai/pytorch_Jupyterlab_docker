@@ -78,7 +78,8 @@ sudo ./install_docker_docker-compose.sh
 ```
 
 ## Installing Nvidia Drivers for Machine Learning
-##### Ref : https://blog.roboflow.com/nvidia-docker-vscode-pytorch/  https://www.linuxcapable.com/install-nvidia-drivers-on-ubuntu-linux/
+#####  Ref : https://blog.roboflow.com/nvidia-docker-vscode-pytorch/ 
+#####  https://www.linuxcapable.com/install-nvidia-drivers-on-ubuntu-linux/
 
 
 
