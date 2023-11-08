@@ -1,7 +1,5 @@
-# pull from devel image instead of base
 
-
-FROM nvidia/cuda:12.2.2-devel-ubuntu22.04
+FROM pytorch/pytorch:latest
 
 # Set bash as the default shell
 ENV SHELL=/bin/bash
@@ -14,9 +12,9 @@ WORKDIR /app/
 # Build with some basic utilities
 RUN apt-get update && apt-get install -y \
     python3-pip \
-    python3-pip \
+    apt-utils \
+    vim \
     git
-    
 
 # alias python='python3'
 RUN ln -s /usr/bin/python3 /usr/bin/python

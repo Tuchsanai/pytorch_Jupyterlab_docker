@@ -40,6 +40,15 @@ docker build --no-cache \
              .
 ```
 
+### or build from pytorch images
+
+```
+docker build --no-cache \
+             -f base-pytorch.dockerfile \
+             -t pytorch-notebook:base \
+             .
+```
+
 
 ### Rename Tag
 
