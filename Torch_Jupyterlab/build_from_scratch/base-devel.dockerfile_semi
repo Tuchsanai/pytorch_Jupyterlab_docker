@@ -12,7 +12,7 @@ WORKDIR /app/
 
 
 # Build with some basic utilities
-RUN apt-get update  -y \
+RUN apt-get update  \
     python3-pip \
     git
 
