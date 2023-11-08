@@ -22,19 +22,29 @@ docker volume rm $(docker volume ls -q)
 # Pytorch jupyter notebook with base-devel with GPUs support
 ## Method I.  With Build Image
 
-### build image
+### build image Full
 
 ```
 docker build --no-cache \
              -f base-devel.dockerfile \
-             -t mypytorch/pytorch-notebook:base \
+             -t pytorch-notebook:base \
              .
 ```
+
+### or build image Semi
+
+```
+docker build --no-cache \
+             -f base-devel.dockerfile_semi \
+             -t pytorch-notebook:base \
+             .
+```
+
 
 ### Rename Tag
 
 ```
-docker tag mypytorch/pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:8Nov2023
+docker tag pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:8Nov2023
 ```
 
 ### Push to Docker Hub
