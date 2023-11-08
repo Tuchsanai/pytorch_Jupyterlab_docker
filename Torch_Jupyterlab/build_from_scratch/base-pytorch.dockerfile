@@ -8,16 +8,8 @@ ENV SHELL=/bin/bash
 WORKDIR /app/
 
 
-
-# Build with some basic utilities
-RUN apt-get update && apt-get install -y \
-    python3-pip \
-    apt-utils \
-    vim \
-    git
-
-# alias python='python3'
-RUN ln -s /usr/bin/python3 /usr/bin/python
+# Install system dependencies (if any)
+RUN apt-get update && apt-get install -y git
 
 
 # Copy the requirements.txt file to the container
@@ -38,11 +30,6 @@ RUN pip install \
     # Install ipykernel
     ipykernel
 
-# build with some basic python packages
-RUN pip install \
-    torch \
-    torchvision\ 
-    torchaudio 
   
 
 # start jupyter lab
