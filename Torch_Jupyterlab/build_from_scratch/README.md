@@ -31,9 +31,13 @@ docker build --no-cache \
              .
 ```
 
+### Rename Tag
+
 ```
-docker tag mypytorch/pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:19sep2023
+docker tag mypytorch/pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:8Nov2023
 ```
+
+
 ```
 docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:19sep2023
 ```
