@@ -37,9 +37,10 @@ docker build --no-cache \
 docker tag mypytorch/pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:8Nov2023
 ```
 
+# Push to Docker Hub
 
 ```
-docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:19sep2023
+docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:8Nov2023
 ```
 
 ### Start the container with GPUs support with password:
