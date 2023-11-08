@@ -44,13 +44,13 @@ docker build --no-cache \
 ### Rename Tag
 
 ```
-docker tag pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:8Nov2023
+docker tag pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:9Nov2023
 ```
 
 ### Push to Docker Hub
 
 ```
-docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:8Nov2023
+docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:9Nov2023
 ```
 
 ### Start the container with GPUs support with password:
@@ -59,7 +59,7 @@ docker run --rm -it  \
            --gpus all  \
            -p 8888:8888  \
            -e JUPYTER_TOKEN=passwd  \
-           mypytorch/pytorch-notebook:base
+           pytorch-notebook:base 
 ```
 
 ## Method II.  With Docker Compose Up 
@@ -72,7 +72,7 @@ docker-compose -f docker-compose.yml up -d
 ## Method II  pull with docker hub
 
 ```
-docker pull tuchsanai/pytorch_jupyterlab_ubuntu22.04:19sep2023
+docker pull  pytorch_jupyterlab_ubuntu22.04:lastest
 ```
 
 ### With GPU
@@ -83,7 +83,7 @@ docker run --rm -d  \
            -p 8888:8888  \
            -e JUPYTER_TOKEN=passwd  \
            -v ./Notebook:/app  \
-            tuchsanai/pytorch_jupyterlab_ubuntu22.04:19sep2023
+            pytorch_jupyterlab_ubuntu22.04:lastest
 ```
 
 
