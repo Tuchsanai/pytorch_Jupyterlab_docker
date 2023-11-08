@@ -54,7 +54,7 @@ docker run --rm -it  \
 
 ## Method II.  With Docker Compose Up 
 
-d
+
 ```
 docker-compose -f docker-compose.yml up -d
 ```
