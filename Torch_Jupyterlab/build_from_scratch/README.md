@@ -72,7 +72,7 @@ docker-compose -f docker-compose.yml up -d
 ## Method II  pull with docker hub
 
 ```
-docker pull  pytorch_jupyterlab_ubuntu22.04:lastest
+docker pull  tuchsanai/pytorch_jupyterlab_ubuntu22.04:9Nov2023
 ```
 
 ### With GPU
@@ -83,7 +83,7 @@ docker run --rm -d  \
            -p 8888:8888  \
            -e JUPYTER_TOKEN=passwd  \
            -v ./Notebook:/app  \
-            pytorch_jupyterlab_ubuntu22.04:lastest
+            tuchsanai/pytorch_jupyterlab_ubuntu22.04:9Nov2023
 ```
 
 
@@ -96,6 +96,6 @@ docker run --rm -d \
            -p 8888:8888  \
            -e JUPYTER_TOKEN=passwd  \
            -v ./Notebook:/app  \
-           tuchsanai/pytorch_jupyterlab_ubuntu22.04:19sep2023
+           tuchsanai/pytorch_jupyterlab_ubuntu22.04:9Nov2023
 ```
 
