@@ -1,12 +1,10 @@
 ### Clean Docker
 
 ```
-docker stop $(docker ps -a -q)
-docker rm -f $(docker ps -a -q)
-docker rmi -f $(docker images -q)
-docker volume rm $(docker volume ls -q)
-
-
+docker stop $(docker ps -a -q)  # Stop all running containers
+docker rm $(docker ps -a -q)    # Remove all containers
+docker rmi $(docker images -q)  # Remove all images
+docker volume rm $(docker volume ls -q)  # Remove all volumes
 ```
 
 
