@@ -65,12 +65,6 @@ docker run --rm -it  \
            pytorch-notebook:base 
 ```
 
-## Method II.  With Docker Compose Up 
-
-
-```
-docker-compose -f docker-compose.yml up -d
-```
 
 ## Method II  pull with docker hub
 
