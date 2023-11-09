@@ -24,23 +24,7 @@ docker volume rm $(docker volume ls -q)
 
 ### build image Full
 
-```
-docker build --no-cache \
-             -f base-devel.dockerfile \
-             -t pytorch-notebook:base \
-             .
-```
 
-### or build image Semi
-
-```
-docker build --no-cache \
-             -f base-devel.dockerfile_semi \
-             -t pytorch-notebook:base \
-             .
-```
-
-### or build from pytorch images
 
 ```
 docker build --no-cache \
@@ -50,17 +34,27 @@ docker build --no-cache \
 ```
 
 
-### Rename Tag
+### Rename Tag to crete version
 
 ```
-docker tag pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:9Nov2023
+docker tag pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:10Nov2023
 ```
+
+```
+docker tag pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:latest
+```
+
 
 ### Push to Docker Hub
 
 ```
-docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:9Nov2023
+docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:10Nov2023
 ```
+
+```
+docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:latest
+```
+
 
 ### Start the container with GPUs support with password:
 ```
@@ -92,8 +86,10 @@ docker run --rm -d  \
            -p 8888:8888  \
            -e JUPYTER_TOKEN=passwd  \
            -v ./Notebook:/app  \
-            tuchsanai/pytorch_jupyterlab_ubuntu22.04:9Nov2023
-```
+            tuchsanai/pytorch_jupyterlab_ubuntu22.04:latest
+
+
+
 
 
 
@@ -105,6 +101,6 @@ docker run --rm -d \
            -p 8888:8888  \
            -e JUPYTER_TOKEN=passwd  \
            -v ./Notebook:/app  \
-           tuchsanai/pytorch_jupyterlab_ubuntu22.04:9Nov2023
+           tuchsanai/pytorch_jupyterlab_ubuntu22.04:latest
 ```
 
