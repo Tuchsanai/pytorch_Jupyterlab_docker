@@ -81,7 +81,7 @@ docker run --rm -d  \
            -e JUPYTER_TOKEN=passwd  \
            -v ./Notebook:/app  \
             tuchsanai/pytorch_jupyterlab_ubuntu22.04:latest
-
+```
 
 
 
