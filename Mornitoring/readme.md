@@ -1,0 +1,1 @@
+https://grafana.com/grafana/dashboards/14574-nvidia-gpu-metrics/
