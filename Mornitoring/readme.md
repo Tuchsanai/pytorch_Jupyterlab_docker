@@ -1,9 +1,14 @@
-https://grafana.com/grafana/dashboards/14574-nvidia-gpu-metrics/
+
+## id 
+
+- 14574
+- 11074
+- 1860
+
 
 
 ## Node Exporter for Prometheus Dashboard based on 11074
-
-Dashboard for production env troubleshooting, 
+## Dashboard for production env troubleshooting, 
 
 ![Alt Text](https://grafana.com/api/dashboards/15172/images/11186/image)
 
