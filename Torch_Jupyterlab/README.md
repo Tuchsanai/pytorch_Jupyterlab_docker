@@ -28,7 +28,7 @@ docker build --no-cache \
 ### Rename Tag to crete version
 
 ```
-docker tag pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:10Nov2023
+docker tag pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:11Nov2023
 ```
 
 ```
