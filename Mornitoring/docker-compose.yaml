@@ -21,7 +21,6 @@ services:
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=passwd
     volumes:
-      - ./grafana-dashboards:/etc/grafana/dashboards
       - ./grafana-datasources:/etc/grafana/provisioning/datasources
     ports:
       - 3000:3000
