@@ -21,7 +21,7 @@ WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-    apt-get install libgl1-mesa-glx \
+    libgl1-mesa-glx \
     git \
     wget
 
