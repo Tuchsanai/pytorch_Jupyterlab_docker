@@ -5,11 +5,13 @@ FROM pytorch/pytorch:latest
 ENV SHELL=/bin/bash
 
 # Create a working directory
-WORKDIR /app/
+WORKDIR /app
 
 
-# Install system dependencies (if any)
-RUN apt-get update && apt-get install -y git
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    wget
 
 
 # Copy the requirements.txt file to the container
