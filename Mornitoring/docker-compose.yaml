@@ -1,6 +1,7 @@
 version: '3.7'
 
 services:
+
   prometheus:
     image: prom/prometheus
     volumes:
@@ -9,8 +10,19 @@ services:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
     ports:
-      - '9090:9090'
-   
+      - 9090:9090
+    networks:
+      - mornitor_network  
+
+  grafana:
+    image: grafana/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=passwd
+    ports:
+      - 3000:3000
+    networks:
+      - mornitor_network    
+
 
   nvidia_smi_exporter:
     image: utkuozdemir/nvidia_gpu_exporter:1.1.0
@@ -24,18 +36,17 @@ services:
       - /usr/lib/x86_64-linux-gnu/libnvidia-ml.so.1:/usr/lib/x86_64-linux-gnu/libnvidia-ml.so.1
       - /usr/bin/nvidia-smi:/usr/bin/nvidia-smi
     ports:
-      - "9835:9835"
-
+      - 9835:9835
+    networks:
+      - mornitor_network    
 
 
   nodeexporter:
     image: prom/node-exporter
     ports:
       - '9100:9100'
+    networks:
+      - mornitor_network    
 
-  grafana:
-    image: grafana/grafana
-    environment:
-      - GF_SECURITY_ADMIN_PASSWORD=passwd
-    ports:
-      - '3000:3000'
+networks:
+  mornitor_network :
