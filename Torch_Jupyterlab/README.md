@@ -12,7 +12,8 @@ docker volume rm $(docker volume ls -q)  # Remove all volumes
 # Pytorch jupyter notebook with base-devel with GPUs support
 ## Method I.  With Build Image
 
-### build image Full
+### Duild image from Dockerfile
+
 
 
 
