@@ -39,7 +39,7 @@ docker tag pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:lates
 ### Push to Docker Hub
 
 ```
-docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:10Nov2023
+docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:11Nov2023
 ```
 
 ```
