@@ -20,6 +20,8 @@ services:
     container_name: grafana
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=passwd
+    volumes:
+      - ./datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml
     ports:
       - 3000:3000
     networks:
