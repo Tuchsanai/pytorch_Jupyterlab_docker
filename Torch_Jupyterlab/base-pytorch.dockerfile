@@ -7,7 +7,7 @@ WORKDIR /app
 
 # Set bash as the default shell
 ENV SHELL=/bin/bash
-ENV CUDA_HOME /usr/local/cuda12.1/
+#ENV CUDA_HOME /usr/local/cuda12.1/
 
 
 # Create a working directory
