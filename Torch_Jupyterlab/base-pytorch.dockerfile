@@ -19,7 +19,6 @@ RUN apt-get update && apt-get install -y \
     git \
     wget
 
-RUN pip install Cython
 
 # Copy the requirements.txt file to the container
 COPY requirements.txt  requirements.txt
