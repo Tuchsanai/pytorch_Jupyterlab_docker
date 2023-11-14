@@ -5,4 +5,4 @@ matplotlib
 IPython
 seaborn
 scikit-learn
-opencv-python-headless
+
