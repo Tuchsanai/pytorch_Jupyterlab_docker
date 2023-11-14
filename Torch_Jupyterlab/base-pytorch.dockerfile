@@ -7,7 +7,16 @@ WORKDIR /app
 
 # Set bash as the default shell
 ENV SHELL=/bin/bash
-#ENV CUDA_HOME /usr/local/cuda12.1/
+
+# Set the CUDA_HOME environment variable
+ENV CUDA_HOME=/usr/local/cuda-12.1
+
+# Update PATH to include CUDA binary directory
+ENV PATH=/usr/local/cuda-12.1/bin:${PATH}
+
+# Update LD_LIBRARY_PATH to include CUDA library directory
+ENV LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:${LD_LIBRARY_PATH}
+
 
 
 # Create a working directory
