@@ -1,4 +1,4 @@
-#FROM pytorch/pytorch:latest
+# Use a specific version of the PyTorch image
 FROM pytorch/pytorch:2.1.0-cuda12.1-cudnn8-devel
 
 # Create a working directory
@@ -17,11 +17,13 @@ ENV PATH=/usr/local/cuda-12.1/bin:${PATH}
 ENV LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:${LD_LIBRARY_PATH}
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y  &&  python3-opencv -6
-RUN pip install opencv-python \
+RUN apt-get update && apt-get install -y \
     git \
-    wget
+    wget \
+    && rm -rf /var/lib/apt/lists/*
 
+# Install OpenCV via conda
+RUN conda install -c conda-forge opencv && conda clean -afy
 
 # Copy the requirements.txt file to the container
 COPY requirements.txt requirements.txt

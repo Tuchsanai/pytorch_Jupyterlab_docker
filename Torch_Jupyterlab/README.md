@@ -16,7 +16,7 @@ docker volume rm $(docker volume ls -q)  # Remove all volumes
 
 ### Duild image from Dockerfile
 
-
+RUN apt-get   python3-opencv 
 
 
 ```
