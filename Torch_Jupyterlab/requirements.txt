@@ -5,4 +5,5 @@ matplotlib
 IPython
 seaborn
 scikit-learn
+opencv_python
 
