@@ -17,7 +17,7 @@ ENV PATH=/usr/local/cuda-12.1/bin:${PATH}
 ENV LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:${LD_LIBRARY_PATH}
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y  python3-opencv -6
+RUN apt-get update && apt-get install -y  &&  python3-opencv -6
 RUN pip install opencv-python \
     git \
     wget
