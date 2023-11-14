@@ -20,7 +20,7 @@ ENV LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:${LD_LIBRARY_PATH}
 RUN apt-get update && apt-get install -y \
     git \
     wget \
-    && rm -rf /var/lib/apt/lists/*
+   
 
 # Install OpenCV via conda
 RUN conda install -c conda-forge opencv && conda clean -afy
