@@ -17,9 +17,12 @@ ENV PATH=/usr/local/cuda-12.1/bin:${PATH}
 ENV LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:${LD_LIBRARY_PATH}
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y ffmpeg libsm6 libxext6 \
+RUN apt-get update && apt-get install -y  
+
+RUN apt-get install ffmpeg libsm6 libxext6  -y \   
     git \
     wget
+
 
 # Copy the requirements.txt file to the container
 COPY requirements.txt requirements.txt
