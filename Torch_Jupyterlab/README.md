@@ -1,3 +1,5 @@
+if errror please check https://python1233.rssing.com/chan-44877200/article17518.html
+
 ### Clean Docker
 
 ```
@@ -28,7 +30,7 @@ docker build --no-cache \
 ### Rename Tag to crete version
 
 ```
-docker tag pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:12Nov2023
+docker tag pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:14Nov2023
 ```
 
 ```
@@ -39,7 +41,7 @@ docker tag pytorch-notebook:base  tuchsanai/pytorch_jupyterlab_ubuntu22.04:lates
 ### Push to Docker Hub
 
 ```
-docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:12Nov2023
+docker push tuchsanai/pytorch_jupyterlab_ubuntu22.04:14Nov2023
 ```
 
 ```

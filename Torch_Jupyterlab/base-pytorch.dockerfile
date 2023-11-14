@@ -4,7 +4,6 @@ FROM pytorch/pytorch:2.1.0-cuda12.1-cudnn8-devel
 # Create a working directory
 WORKDIR /app
 
-
 # Set bash as the default shell
 ENV SHELL=/bin/bash
 
@@ -17,39 +16,26 @@ ENV PATH=/usr/local/cuda-12.1/bin:${PATH}
 # Update LD_LIBRARY_PATH to include CUDA library directory
 ENV LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:${LD_LIBRARY_PATH}
 
-
-
-# Create a working directory
-WORKDIR /app
-
-
 # Install system dependencies
-RUN apt-get update && apt-get install -y  && ffmpeg libsm6 libxext6  -y\
+RUN apt-get update && apt-get install -y ffmpeg libsm6 libxext6 \
     git \
     wget
 
-
-
 # Copy the requirements.txt file to the container
-COPY requirements.txt  requirements.txt
+COPY requirements.txt requirements.txt
 
 # Install the packages from requirements.txt
-RUN pip install -r  requirements.txt
+RUN pip install -r requirements.txt
 
-# install jupyter lab extensions
-RUN pip install \
-    # https://github.com/mohirio/jupyterlab-horizon-theme
-    jupyterlab-horizon-theme \
-    # https://github.com/jupyterlab/jupyterlab-git
+# Install Jupyter Lab extensions
+RUN pip install jupyterlab-horizon-theme \
     jupyterlab-git \
-    # https://github.com/jtpio/jupyterlab-system-monitor
     jupyterlab-system-monitor \
-    jupyterlab_nvdashboard   \
-    # Install ipykernel
+    jupyterlab_nvdashboard \
     ipykernel
-  
 
-# start jupyter lab
+# Start Jupyter Lab
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser"]
-EXPOSE 8888
 
+# Expose port for Jupyter Lab
+EXPOSE 8888
