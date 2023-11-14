@@ -16,6 +16,10 @@ ENV PATH=/usr/local/cuda-12.1/bin:${PATH}
 # Update LD_LIBRARY_PATH to include CUDA library directory
 ENV LD_LIBRARY_PATH=/usr/local/cuda-12.1/lib64:${LD_LIBRARY_PATH}
 
+# Set the timezone.
+ENV TZ=Asia/Bangkok
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     git \
