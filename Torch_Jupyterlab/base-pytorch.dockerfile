@@ -15,9 +15,10 @@ WORKDIR /app
 
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y  && ffmpeg libsm6 libxext6  -y\
     git \
     wget
+
 
 
 # Copy the requirements.txt file to the container
