@@ -11,9 +11,9 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '1.0' # Limit to 8 CPU cores
+          cpus: '8' # Limit to 8 CPU cores
         reservations:
-          cpus: '1.0' # Reserve 8 CPU cores
+          cpus: '8' # Reserve 8 CPU cores
           devices:
             - driver: nvidia
               count: all
