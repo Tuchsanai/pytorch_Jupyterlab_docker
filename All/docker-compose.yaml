@@ -2,7 +2,7 @@ version: '3.8'
 services:
   pytorch_jupyterlab:
     image: tuchsanai/pytorch_jupyterlab_ubuntu22.04:latest
-    shm_size: '16gb'  # Sets the shared memory size to 20 gigabytes
+    shm_size: '32gb'  # Sets the shared memory size to 20 gigabytes
     ports:
       - "8888:8888"
     environment:
